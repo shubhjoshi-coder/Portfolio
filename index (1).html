@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joshi Shubham — Computer Engineering Student</title>
+  <meta name="description" content="Portfolio of Joshi Shubham, a Computer Engineering student at Parul University, currently learning HTML, CSS, C, C++ and UI/UX design." />
+
+  <!-- Fonts: Space Grotesk for display/headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22none%22 stroke=%22%234FD1FF%22 stroke-width=%228%22/></svg>" />
+</head>
+<body>
+
+  <!-- ===== Loading Screen ===== -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-core">
+      <span></span><span></span><span></span>
+    </div>
+    <p class="loader-text">initializing<span class="dots">...</span></p>
+  </div>
+
+  <!-- ===== Scroll Progress Bar ===== -->
+  <div id="scroll-progress" role="presentation"></div>
+
+  <!-- ===== Custom Cursor (desktop only, added via JS) ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">JS<span>.</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" data-nav>Home</a>
+        <a href="#about" class="nav-link" data-nav>About</a>
+        <a href="#journey" class="nav-link" data-nav>Journey</a>
+        <a href="#skills" class="nav-link" data-nav>Skills</a>
+        <a href="#projects" class="nav-link" data-nav>Projects</a>
+        <a href="#contact" class="nav-link" data-nav>Contact</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===== Hero Section ===== -->
+    <section class="hero" id="home">
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="hero-status">
+          <span class="status-dot"></span>
+          Currently learning &amp; building
+        </p>
+
+        <h1 class="hero-title">
+          Joshi Shubham
+        </h1>
+        <p class="hero-subtitle">Computer Engineering Student</p>
+
+        <p class="hero-desc">
+          Building my foundation in technology, programming and interactive
+          digital experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#journey" class="btn btn-primary">Explore My Journey</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="reveal">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-text">
+            I'm a Computer Engineering student currently in my 3rd semester at
+            Parul University, Gujarat. Before this, I completed my Diploma in
+            Computer Engineering, which gave me my first real exposure to
+            programming and the way software is built.
+          </p>
+          <p class="section-text">
+            Right now, I'm focused on strengthening my fundamentals —
+            learning HTML, CSS, C and C++ in depth, while slowly stepping
+            into UI/UX design. I don't have years of professional experience;
+            what I do have is consistent curiosity and a habit of building
+            small things to understand how they work.
+          </p>
+          <p class="section-text">
+            This portfolio itself is part of that process — a Frontend
+            Foundations and Interactive Designing assignment built with
+            plain HTML, CSS and JavaScript, to show what I've learned so far.
+          </p>
+        </div>
+
+        <div class="info-card glass reveal">
+          <div class="info-card-glow" aria-hidden="true"></div>
+          <h3 class="info-card-title">Profile</h3>
+          <ul class="info-list">
+            <li><span>Name</span><strong>Joshi Shubham</strong></li>
+            <li><span>Field</span><strong>Computer Engineering</strong></li>
+            <li><span>University</span><strong>Parul University</strong></li>
+            <li><span>Semester</span><strong>3rd Semester</strong></li>
+            <li><span>Experience</span><strong>Student / Learner</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Journey / Education Timeline ===== -->
+    <section class="section" id="journey">
+      <div class="container">
+        <h2 class="section-title reveal">My Journey</h2>
+        <p class="section-text reveal" style="max-width:60ch">
+          A simple, honest timeline of where I've been and where I am right now.
+        </p>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <div class="timeline-marker">01</div>
+            <div class="timeline-content glass">
+              <h3>Diploma in Computer Engineering</h3>
+              <p>Built my first foundation in programming logic, basic web development and core engineering concepts.</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-marker">02</div>
+            <div class="timeline-content glass">
+              <h3>Parul University</h3>
+              <p>Continued my education in Computer Engineering, joining a larger academic and technical community.</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-marker">03</div>
+            <div class="timeline-content glass">
+              <h3>Computer Engineering</h3>
+              <p>Studying core subjects while exploring frontend development and interactive design on the side.</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-marker">04</div>
+            <div class="timeline-content glass">
+              <h3>3rd Semester</h3>
+              <p>Currently enrolled and working through coursework, assignments and personal practice projects.</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <div class="timeline-marker">05</div>
+            <div class="timeline-content glass accent">
+              <h3>Right Now</h3>
+              <p>Currently learning and building — one concept, one project at a time.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Skills Section ===== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal">Skills</h2>
+        <p class="section-text reveal" style="max-width:60ch">
+          These are learning-level indicators, not professional ratings —
+          an honest snapshot of where I am with each right now.
+        </p>
+
+        <div class="skills-grid">
+
+          <div class="skill-card glass reveal" data-tilt>
+            <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+            <h3>HTML</h3>
+            <p>Structuring pages with clean, semantic markup.</p>
+            <div class="skill-level">
+              <div class="skill-level-track">
+                <div class="skill-level-fill" data-level="60"></div>
+              </div>
+              <span class="skill-level-label">Learning</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-tilt>
+            <div class="skill-icon" aria-hidden="true">#</div>
+            <h3>CSS</h3>
+            <p>Styling layouts, animations and responsive design.</p>
+            <div class="skill-level">
+              <div class="skill-level-track">
+                <div class="skill-level-fill" data-level="55"></div>
+              </div>
+              <span class="skill-level-label">Learning</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-tilt>
+            <div class="skill-icon" aria-hidden="true">C</div>
+            <h3>C</h3>
+            <p>Understanding core programming logic and syntax.</p>
+            <div class="skill-level">
+              <div class="skill-level-track">
+                <div class="skill-level-fill" data-level="45"></div>
+              </div>
+              <span class="skill-level-label">Learning</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-tilt>
+            <div class="skill-icon" aria-hidden="true">C++</div>
+            <h3>C++</h3>
+            <p>Learning object-oriented concepts and problem solving.</p>
+            <div class="skill-level">
+              <div class="skill-level-track">
+                <div class="skill-level-fill" data-level="40"></div>
+              </div>
+              <span class="skill-level-label">Learning</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal" data-tilt>
+            <div class="skill-icon" aria-hidden="true">◇</div>
+            <h3>UI/UX Design</h3>
+            <p>Exploring how good design makes interfaces easier to use.</p>
+            <div class="skill-level">
+              <div class="skill-level-track">
+                <div class="skill-level-fill" data-level="30"></div>
+              </div>
+              <span class="skill-level-label">Beginner</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects Section ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title reveal">Projects &amp; Learning</h2>
+        <p class="section-text reveal" style="max-width:65ch">
+          I'm currently building my foundation in programming, frontend
+          development and UI/UX. This section will grow as I turn what I
+          learn into real projects.
+        </p>
+
+        <div class="projects-grid">
+          <div class="project-card glass reveal">
+            <div class="project-tag">Coming Soon</div>
+            <h3>First Web Project</h3>
+            <p>A small project applying HTML &amp; CSS fundamentals once it's ready to share.</p>
+          </div>
+          <div class="project-card glass reveal">
+            <div class="project-tag">Currently Learning</div>
+            <h3>C++ Practice</h3>
+            <p>Working through problems and small programs to strengthen core logic.</p>
+          </div>
+          <div class="project-card glass reveal">
+            <div class="project-tag">Future Project</div>
+            <h3>UI/UX Case Study</h3>
+            <p>A planned design exercise once I'm confident enough to publish one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== What's Next Section ===== -->
+    <section class="section" id="next">
+      <div class="container">
+        <h2 class="section-title reveal">What's Next?</h2>
+        <p class="section-text reveal" style="max-width:60ch">
+          A rough roadmap of where I want to take my skills from here.
+        </p>
+
+        <div class="roadmap">
+          <div class="roadmap-item reveal">
+            <span class="roadmap-dot"></span>
+            <p>Improve frontend development</p>
+          </div>
+          <div class="roadmap-item reveal">
+            <span class="roadmap-dot"></span>
+            <p>Build real-world websites</p>
+          </div>
+          <div class="roadmap-item reveal">
+            <span class="roadmap-dot"></span>
+            <p>Learn advanced JavaScript</p>
+          </div>
+          <div class="roadmap-item reveal">
+            <span class="roadmap-dot"></span>
+            <p>Improve UI/UX skills</p>
+          </div>
+          <div class="roadmap-item reveal">
+            <span class="roadmap-dot"></span>
+            <p>Build interactive web experiences</p>
+          </div>
+          <div class="roadmap-item reveal">
+            <span class="roadmap-dot"></span>
+            <p>Create and publish personal projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-text">
+            Have a question, a suggestion, or just want to say hi? Reach out —
+            I'd genuinely like to hear from you.
+          </p>
+
+          <div class="contact-details">
+            <a href="mailto:2503396160035@paruluniversity.ac.in" class="contact-item">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">2503396160035@paruluniversity.ac.in</span>
+            </a>
+            <a href="tel:+919054208306" class="contact-item">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">90542 08306</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form glass reveal" id="contactForm" novalidate>
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <span class="form-error" id="nameError"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <span class="form-error" id="emailError"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Joshi Shubham. Built with HTML, CSS &amp; JavaScript.</p>
+      <p class="footer-sub">Computer Engineering Student | Parul University</p>
+    </div>
+  </footer>
+
+  <!-- ===== Back to Top ===== -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
